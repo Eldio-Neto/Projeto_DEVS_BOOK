@@ -6,7 +6,7 @@ $firstName = current(explode(' ', $userInfo->name))
     <div class="box-body">
         <div class="feed-new-editor m-10 row">
             <div class="feed-new-avatar">
-                <img src="<?= $base; ?>/media/avatars/<?= $userInfo->avatar; ?>" />
+                <img src="<?= $base; ?>/media/avatars/<?= $userInfo->avatar?$userInfo->avatar: 'default.jpg'; ?>" />
             </div>
             <div class="feed-new-input-placeholder">O que você está pensando, <?= $firstName; ?>?</div>
             <div class="feed-new-input" contenteditable="true"></div>
